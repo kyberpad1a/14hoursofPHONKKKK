@@ -1,0 +1,63 @@
+﻿<Window x:Class="lohovskayaProga.ScheduleEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lohovskayaProga"
+        mc:Ignorable="d"
+        Title="ScheduleEdit" Height="350" Width="800" WindowStyle="ToolWindow"  WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Style="{StaticResource LabelStyle}" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="13">Flight route</Label>
+
+        <Label Style="{StaticResource LabelStyle}" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="1" FontSize="13">From:</Label>
+        <Label Name="lbFrom" Style="{StaticResource LabelStyle}" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" FontSize="13">XXX</Label>
+
+        <Label Style="{StaticResource LabelStyle}" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="3" FontSize="13">To:</Label>
+        <Label Name="lbTo" Style="{StaticResource LabelStyle}" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="4" FontSize="13">XXX</Label>
+
+        <Label Style="{StaticResource LabelStyle}" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="5" FontSize="13">Aircraft:</Label>
+        <Label Name="lbAircrft" Style="{StaticResource LabelStyle}" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="2" FontSize="13">XXX</Label>
+
+        <Label Style="{StaticResource LabelStyle}" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="1" FontSize="13">Date:</Label>
+        <DatePicker Name="dpDate"  Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="2" FontSize="15" Foreground="#196AA6" FontFamily="Fonts/TeXGyreAdventor-Regular.ttf"/>
+
+        <Label Style="{StaticResource LabelStyle}" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="5" FontSize="13">Time:</Label>
+        <TextBox Name="tbTime" FontSize="13"  Style="{StaticResource TextBoxStyle}" Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="6"/>
+
+        <Label Style="{StaticResource LabelStyle}" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="3" FontSize="13">Economy price: $</Label>
+        <TextBox Name="tbEconomyPrice" FontSize="13"  Style="{StaticResource TextBoxStyle}" Grid.Row="5" Grid.ColumnSpan="1" Grid.Column="10"/>
+
+        <Button  Background="red" Name="CancelButton" Style="{StaticResource ButtonStyle}" Grid.Row="7" Grid.Column="10" Grid.ColumnSpan="3" Content="Cancel" Click="CancelButton_Click" />
+        <Button Name="UpdateButton" Style="{StaticResource ButtonStyle}" Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="3" Content="Update" Click="UpdateButton_Click" />
+
+
+    </Grid>
+</Window>
